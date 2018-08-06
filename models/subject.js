@@ -7,23 +7,23 @@ var sequelize = require("../config/connection.js");
 var subject = sequelize.define("Subject", {
   question: {
     type: Sequelize.STRING,
-    allowNull: false
+    notNull: true
   },
   correct: {
     type: Sequelize.STRING,
-    allowNull: false
+    notNull: true
   },
   incorrect1: {
     type: Sequelize.STRING,
-    allowNull: false
+    notNull: true
   },
   incorrect2: {
     type: Sequelize.STRING,
-    allowNull: false
+    notNull: true
   },
   incorrect3: {
     type: Sequelize.STRING,
-    allowNull: false
+    notNull: true
   }
 });
 
