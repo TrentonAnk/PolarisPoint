@@ -7,22 +7,23 @@ var sequelize = require("../config/connection.js");
 var user = sequelize.define("User", {
   email: {
     type: Sequelize.STRING,
-    allowNull: false
+    notNull: true
   },
   password: {
     type: Sequelize.STRING,
-    allowNull: false,
+    notNull: true,
     validate: {
         len: [6,12]
       }
   },
   gems: {
     type: Sequelize.INTEGER,
-    allowNull: false
+    notNull: true
   },
   canEarn: {
     type: Sequelize.BOOLEAN,
-    allowNull: false
+    default: false,
+    notNull: true
   }
 });
 
