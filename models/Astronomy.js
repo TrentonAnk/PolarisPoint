@@ -4,7 +4,7 @@ var Sequelize = require("sequelize");
 var sequelize = require("../config/connection.js");
 
 // Creates a "subject" model that matches up with DB
-var subject = sequelize.define("Subject", {
+var Astronomy = sequelize.define("Astronomy", {
   question: {
     type: Sequelize.STRING,
     notNull: true
@@ -28,7 +28,7 @@ var subject = sequelize.define("Subject", {
 });
 
 // Syncs with DB
-Subject.sync();
+Astronomy.sync();
 
-// Makes the Subject Model available for other files (will also create a table)
-module.exports = Subject;
+// Makes the Astronomy Model available for other files (will also create a table)
+module.exports = Astronomy;
