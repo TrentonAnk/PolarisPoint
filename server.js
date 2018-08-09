@@ -627,7 +627,7 @@ db.sequelize.sync({ force: true }).then(function() {
           );
           return Promise.all(answers);
         })
-      );
+      ); 
       
     
   app.listen(PORT, function() {
